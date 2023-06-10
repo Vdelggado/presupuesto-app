@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Aplicacion de presupuesto</title>
+</head>
+
+<body>
+    <main>
+        <section id="header">
+            <section class="detalles">
+            <div id="presupuesto">
+                <p class="presu-title">Presupuesto Disponible:</p>
+                <p class="presu-monto" id="presuTot"></p>
+            </div>
+                <div class="ingresos">
+                    <p class="p-ingreso">INGRESOS</p>
+                    <p class="ingresos-monto" id="ingre"></p>
+                </div>
+                <div class="egresos">
+                    <p class="t-egresos">EGRESOS</p>
+                    <p class="eg-monto" id="egre"></p>
+                </div>
+            </section>
+        </section>
+
+        <form class="input-Ie" id="forma">
+            <select name="" id="tipo">
+                <option value="Ingreso">+</option>
+                <option value="Egreso">-</option>
+            </select>
+            <input type="text" placeholder="agregar descripcion" id="descripcion">
+            <input type="number" placeholder="Valor" id="valor" step="any">
+            <!--el step permite que se puedan recibir numero con decimales-->
+            <button><span class="material-symbols-outlined">send</span></button>
+        </form>
+
+        <section class="footer">
+            <div class="f-ingresos">
+                <h2>INGRESOS</h2>
+                <div id="lista-ingresos"></div>
+            </div>
+            <div class="f-egresos">
+                <h2>EGRESOS</h2>
+                <div id="lista-egresos"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>

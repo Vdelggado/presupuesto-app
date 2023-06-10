@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto:wght@300&display=swap');
+:root{
+    --header-title-size: 2rem;
+    --monto-title-size: 1.5rem;
+    --ligh-red: rgb(248, 193, 193);
+    --ligh-purple: rgb(241, 189, 241);
+    --ligh-green: rgb(174, 235, 174);
+    --purple: #6870af;
+    --dark-purple: #4c527b;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #f1f0f6;
+}
+main{
+    height: 100vh;
+}
+#header{
+    background-color: #fff;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    margin: 20px 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.p-ingreso,.t-egresos{
+    font-weight: bold;
+}
+
+.presu-title{
+    font-size: var(--header-title-size);
+    font-weight: bold;
+    color: white;
+}
+.presu-monto{
+    font-size: var(--monto-title-size);
+    font-weight: bold;
+    color: white;
+    margin-top: 5px;
+}
+.detalles{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    gap: 20px;
+}
+.ingresos, .egresos, #presupuesto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 25%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#ingre,#egre{
+    font-size: var(--monto-title-size);
+}
+#egre{
+    color: red;
+    font-weight: bold;
+}
+#ingre{
+    color: green;
+    font-weight: bold;
+}
+#presupuesto{
+    background-color: var(--dark-purple);
+}
+.ingresos{
+    font-size: var(--header-title-size);
+    background-color: var(--ligh-green);
+    
+}
+.egresos{
+    font-size: var(--header-title-size);
+    background-color: var(--ligh-red);
+}
+
+#forma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 70px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+input,select,#forma button{
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#forma button{
+    background-color: var(--purple);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+#descripcion{
+    width: 30%;
+    padding: 10px;
+}
+#valor,select{
+    width: 5%;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 58%;
+    gap: 30px;
+}
+h2{
+    color: var(--dark-purple);
+}
+.f-ingresos,.f-egresos{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    overflow-y: auto;
+}
+.f-ingresos,.f-egresos::--webkit-scrollbar{
+    height: 10px;
+}
+.f-ingresos,.f-egresos::--webkit-scrollbar-thumb{
+    background-color: var(--purple);
+    border-radius: 5px;
+}
+
+#lista-ingresos,#lista-egresos{
+    width: 100%;
+}
+.f-content,.f-content-egreso{
+    display: flex;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.f-content-descrip,.egre-descrip{
+    width: 50%;
+}
+.elemnto-list-monto{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width:50%;
+}
+.elemnto-list-monto button{
+    border: none;
+    background-color: transparent;
+}
+.list-ingre-monto{
+    color: #4b813a;
+    font-weight: bold;
+}
+.monto-egre{
+    color: #c1121f;
+    font-weight: bold;
+}
+.footer .material-symbols-outlined{
+        color:var(--dark-purple)
+}
+.footer .material-symbols-outlined:hover{
+    color: #c1121f;
+}
+/* <----------------------------------------- Media Queries -------------------------------------------------------->*/
+@media screen and (max-width: 768px) {
+main{
+    width: 100%;
+    margin: 0px;
+}
+#header{
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    height: auto;
+}
+.detalles{
+    flex-direction: column;
+    align-items: center;
+}
+.ingresos, .egresos, #presupuesto{
+    width: 80%;
+}
+.presu-title,.p-ingreso,.t-egresos{
+    font-size: 20px;
+}
+
+#forma{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    height: 70px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+#forma button{
+    background-color: var(--purple);
+    padding: 10px 20px;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+#descripcion{
+    width: 35%;
+    padding: 10px;
+}
+#valor,select{
+    width: 15%;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+   flex-direction: column;
+}
+.f-ingresos,.f-egresos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+    
+}
