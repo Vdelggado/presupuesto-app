@@ -42,7 +42,7 @@ echo json_encode($products_arr);
     //asignarcodigoderespuesta-404Noencontrado
     http_response_code(404);
     //informarlealusuarioquenoseencontraronproductos
-    echo json_encode(array("message"=>"Noseencontraronproductos."));
+    echo json_encode(array("message"=>"Nose encontraron productos."));
 }
 
 ?>
